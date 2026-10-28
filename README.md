@@ -1,8 +1,29 @@
 # IMC Prosperity 4
 
-My algorithms and manual-round analysis for **IMC Prosperity 4** (April 2026).
+Algorithms and manual-round analysis for **IMC Prosperity 4** (April 2026), team **Quant Finance at UTokyo**.
 
-**Final ranking: 68th globally, 8th in Asia, 1st in Japan.**
+## Result
+
+**68th globally, 8th in Asia, 1st in Japan**, with 676,755 XIRECs in total.
+
+| Ranking | Position |
+|---|---:|
+| Overall | 68 |
+| Algorithmic | 94 |
+| Manual | 134 |
+| Asia | 8 |
+| Japan | 1 |
+
+![Final leaderboard](docs/leaderboard_summary.png)
+
+![Top Trader: Asia badge, awarded to the top 10 teams in Asia](docs/badge_top_trader_asia.png)
+
+<details>
+<summary>Leaderboard around our position</summary>
+
+![Leaderboard positions 65–71](docs/leaderboard_rank.png)
+
+</details>
 
 ## What is IMC Prosperity?
 
