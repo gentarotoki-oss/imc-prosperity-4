@@ -14,7 +14,7 @@ jobs:
         with:
           python-version: "3.13"
           cache: pip
-      - run: pip install prosperity4btest pytest
+      - run: pip install -r requirements.txt
       - name: Position-limit tests on synthetic books
         run: pytest
       - name: One-day backtests on the data bundled with the backtester
