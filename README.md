@@ -94,6 +94,10 @@ Backtested with [prosperity4btest](https://github.com/nabayansaha/imc-prosperity
 | 4 | 1, 2, 3 | 236,273 · 219,445 · 297,807 | 753,525 |
 | 5 | 2, 3, 4 | 254,908 · 242,994 · 244,234 | 742,137 |
 
+![Backtest PnL by round](docs/backtest_pnl.png)
+
+The chart shows the character of each strategy: in rounds 1–2 pepper root's buy-and-hold climbs in a straight line while market making in osmium adds a steady, smaller stream; rounds 3–4 earn across the whole option chain with visible drawdowns; round 5's profit is spread over many products rather than coming from a few. (Round 1 is plotted over days −2 to 0; the short day 1 is left out. Made with [`scripts/plot_backtests.py`](scripts/plot_backtests.py).)
+
 The [simple example](examples/simple_market_maker.py) only market-makes ASH_COATED_OSMIUM around 10,000. It makes about 14,000–17,000 per day in round 1, against about 96,000 per day for the round 1 trader, most of whose extra profit comes from holding pepper root.
 
 ## Manual rounds
