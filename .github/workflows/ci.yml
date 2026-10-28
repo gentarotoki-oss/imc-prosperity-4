@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install prosperity4btest pytest
+      - name: Position-limit tests on synthetic books
+        run: pytest
+      - name: One-day backtests on the data bundled with the backtester
+        run: |
+          python -m prosperity4bt round0/trader.py 0--1 --no-out
+          python -m prosperity4bt round1/trader.py 1-0 --no-out
+          python -m prosperity4bt round2/trader.py 2-0 --no-out
