@@ -2,6 +2,8 @@
 
 Algorithms and manual-round analysis for **IMC Prosperity 4** (April 2026), team **Quant Finance at UTokyo**.
 
+We took part as a team. I wrote the algorithmic traders for all rounds (`round0/` to `round5/`); the manual rounds were team work.
+
 ## Result
 
 **68th globally, 8th in Asia, 1st in Japan**, with 676,755 XIRECs in total.
@@ -47,7 +49,7 @@ manual/              manual-round analysis (rounds 2–4)
 examples/            a 50-line market maker to start from
 ```
 
-Each `roundN/trader.py` is a single file that can be uploaded as-is, picked from about 10–30 versions per round. I did not keep a record of exactly which file was my final submission. For rounds 1–3 these are my last versions of the round, and for rounds 4 and 5 the versions closest to the code in my upload logs from the competition site. The tutorial file is the uploaded code itself.
+Each `roundN/trader.py` is a single file that can be uploaded as-is, picked from about 10–30 versions per round. I did not keep a record of exactly which file was our final submission. For rounds 1–3 these are my last versions of the round, and for rounds 4 and 5 the versions closest to the code in our upload logs from the competition site. The tutorial file is the uploaded code itself.
 
 ## Strategies
 
@@ -96,7 +98,9 @@ The [simple example](examples/simple_market_maker.py) only market-makes ASH_COAT
 
 ## Manual rounds
 
-| Round | Puzzle | What I did |
+Analysis scripts from the team's work on the manual rounds:
+
+| Round | Puzzle | Approach |
 |---|---|---|
 | 2 | *Invest & Expand*: split a 50,000 budget across Research, Scale and Speed, where Speed pays according to your rank among all players | [Closed-form optimum](manual/round2/invest_expand.py) for given Speed, then a [symmetric Nash equilibrium](manual/round2/nash.py) over other players' choices |
 | 3 | Two sealed bids against counterparties with reserve prices between 670 and 920, with a penalty if the second bid is below the average | [Expected value simulation and best-response iteration](manual/round3/bid_simulation.py) |
