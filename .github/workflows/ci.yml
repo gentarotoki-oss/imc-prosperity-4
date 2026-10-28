@@ -17,8 +17,5 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Position-limit tests on synthetic books
         run: pytest
-      - name: One-day backtests on the data bundled with the backtester
-        run: |
-          python -m prosperity4bt round0/trader.py 0--1 --no-out
-          python -m prosperity4bt round1/trader.py 1-0 --no-out
-          python -m prosperity4bt round2/trader.py 2-0 --no-out
+      - name: Tutorial backtest on the data bundled with the backtester
+        run: python -m prosperity4bt round0/trader.py 0 --no-out

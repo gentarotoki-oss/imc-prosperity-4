@@ -109,11 +109,13 @@ Analysis scripts from the team's work on the manual rounds:
 ## Run
 
 ```bash
-pip install prosperity4btest
-python -m prosperity4bt round1/trader.py 1
+pip install -r requirements.txt
+python -m prosperity4bt round0/trader.py 0                       # tutorial data is bundled
+python -m prosperity4bt round1/trader.py 1 --data <data dir>     # other rounds need their data
+pytest                                                           # position-limit tests
 ```
 
-The backtester ships the data for the tutorial and rounds 1–2; for later rounds pass the round's data with `--data`. It only knows the position limits of the round 0–2 products and uses 50 for anything else, so rounds 3–4 need the real limits:
+The data is not included in this repository. The backtester only knows the position limits of the round 0–2 products and uses 50 for anything else, so rounds 3–4 need the real limits:
 
 ```bash
 python -m prosperity4bt round3/trader.py 3 --data <data dir> \
